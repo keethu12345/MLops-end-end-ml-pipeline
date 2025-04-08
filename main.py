@@ -4,7 +4,7 @@ import logging
 # Setup Logtail logging
 log_handler = LogtailHandler(source_token="sBC83YBeFFdvdLAQSQWnvkDs")
 logger = logging.getLogger(__name__)
-logger.handlers = []  # Remove default FastAPI/uvicorn loggers
+logger.handlers.clear()     # ✅ This is the correct way to clear handlers
 logger.setLevel(logging.INFO)
 logger.addHandler(log_handler)
 
