@@ -3,10 +3,13 @@ import logging
 
 # Setup Logtail logging
 log_handler = LogtailHandler(source_token="sBC83YBeFFdvdLAQSQWnvkDs")
+print("✅ Logtail handler created")
 logger = logging.getLogger(__name__)
 logger.handlers.clear()     # ✅ This is the correct way to clear handlers
 logger.setLevel(logging.INFO)
 logger.addHandler(log_handler)
+print("✅ Logger configured")
+
 
 logger.info("🚀 App started — Logtail logging active")  # <--- ADD THIS LINE
 
