@@ -8,6 +8,8 @@ logger.handlers.clear()     # ✅ This is the correct way to clear handlers
 logger.setLevel(logging.INFO)
 logger.addHandler(log_handler)
 
+logger.info("🚀 App started — Logtail logging active")  # <--- ADD THIS LINE
+
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from sklearn.datasets import load_iris
